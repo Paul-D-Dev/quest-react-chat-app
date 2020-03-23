@@ -6,6 +6,11 @@
     display: flex;
     align-items: center;
   }
+
+  .info {
+      display:flex;
+      flex-direction: column;
+  }
   
   /* Contact image */
   .Contact .avatar {
