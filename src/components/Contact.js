@@ -4,9 +4,9 @@ import './style/Contact.css';
 
 
 Contact.prototype = {
-    name: PropTypes.objectOf(PropTypes.string),
+    name: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    status: PropTypes.bool.isRequired
+    online: PropTypes.bool.isRequired
 }
 
 function Contact(props) {
@@ -14,9 +14,9 @@ function Contact(props) {
         <div className="Contact">
             <img src={props.avatar} alt="props.avatar" className="avatar"/>
             <div className="info">
-                <p className="name">{props.name.firstName + ' ' + props.name.lastName}</p>
+                <p className="name">{props.name}</p>
                 <div className="status">
-                    {props.status ? 
+                    {props.online ? 
                         <div>
                             <div className="status-online"></div>
                             <p className="status-text">online</p>
